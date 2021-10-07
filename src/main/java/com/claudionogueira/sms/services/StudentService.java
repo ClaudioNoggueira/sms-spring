@@ -7,4 +7,6 @@ import com.claudionogueira.sms.entities.Student;
 public interface StudentService {
 
 	List<Student> listAllStudents();
+	
+	void addStudent(Student obj);
 }

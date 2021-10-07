@@ -22,4 +22,7 @@ public class StudentServiceImpl implements StudentService {
 		return repo.findAll();
 	}
 
+	public void addStudent(Student obj) {
+		repo.save(obj);
+	}
 }
