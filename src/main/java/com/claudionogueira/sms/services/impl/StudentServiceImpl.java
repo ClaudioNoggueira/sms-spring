@@ -22,7 +22,18 @@ public class StudentServiceImpl implements StudentService {
 		return repo.findAll();
 	}
 
+	@Override
+	public Student findStudentById(Integer id) {
+		return repo.findById(id).get();
+	}
+
 	public void addStudent(Student obj) {
 		repo.save(obj);
 	}
+
+	@Override
+	public void updateStudent(Student obj) {
+		repo.save(obj);
+	}
+
 }

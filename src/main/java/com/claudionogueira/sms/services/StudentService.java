@@ -8,5 +8,9 @@ public interface StudentService {
 
 	List<Student> listAllStudents();
 	
+	Student findStudentById(Integer id);
+	
 	void addStudent(Student obj);
+	
+	void updateStudent(Student obj);
 }

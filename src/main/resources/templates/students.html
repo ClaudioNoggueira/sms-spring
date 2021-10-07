@@ -9,6 +9,28 @@
 	crossorigin="anonymous">
 </head>
 <body>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">SMS</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/students}">Student
+						Management System</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<br>
+
 	<div class="container">
 		<div class="row">
 			<h1>List of Students</h1>
@@ -26,7 +48,7 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
-					<th></th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -35,6 +57,8 @@
 					<td th:text="${student.firstName}"></td>
 					<td th:text="${student.lastName}"></td>
 					<td th:text="${student.email}"></td>
+					<td><a th:href="@{/students/edit/{id}(id=${student.id})}"
+						class="btn btn-primary">Update</a></td>
 				</tr>
 			</tbody>
 		</table>
