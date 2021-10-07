@@ -13,4 +13,6 @@ public interface StudentService {
 	void addStudent(Student obj);
 	
 	void updateStudent(Student obj);
+	
+	void deleteStudentById(Integer id);
 }

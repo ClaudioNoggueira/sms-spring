@@ -36,4 +36,8 @@ public class StudentServiceImpl implements StudentService {
 		repo.save(obj);
 	}
 
+	@Override
+	public void deleteStudentById(Integer id) {
+		repo.deleteById(id);
+	}
 }
